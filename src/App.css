@@ -14,4 +14,6 @@ body {
 input { 
   width: 100%;
   border: 0;
+  outline: none;
+  -webkit-appearance: none;
 }
