@@ -13,6 +13,10 @@ export const AppContainer = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        .content {
+            display: none;
+        }
     }
     
     @media (min-width: 768px) {
@@ -21,6 +25,7 @@ export const AppContainer = styled.div`
             justify-content: space-between;
 
             .content {
+                display: flex;
                 flex: 0 0 50%;
             }
         }
