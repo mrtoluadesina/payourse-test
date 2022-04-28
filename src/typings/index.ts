@@ -18,5 +18,6 @@ export interface IList {
 }
 
 export interface ISearch {
-    onChange: React.InputHTMLAttributes<HTMLInputElement>['onChange'];
+  onChange: React.InputHTMLAttributes<HTMLInputElement>["onChange"];
+  placeholder: string;
 }
