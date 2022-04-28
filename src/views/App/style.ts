@@ -20,6 +20,21 @@ export const SearchList = styled.div`
     p {
         color: rgb(0, 179, 228);
         font-weight: 500;
+
+        &:last-child {
+            display: none;
+        }
+    }
+
+    @media (min-width: 768px) {
+        p {
+            &:first-child {
+                display: none;
+            }
+            &:last-child {
+                display: unset;
+            }
+        }
     }
 `;
 

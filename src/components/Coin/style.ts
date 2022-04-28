@@ -5,6 +5,7 @@ export const CoinWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 0.5rem 0;
+    min-width: 280px;
 `;
 
 export const Crypto = styled.h2`
