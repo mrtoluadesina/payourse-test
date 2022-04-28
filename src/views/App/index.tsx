@@ -34,7 +34,8 @@ const ListApp = () => {
   return (
     <ListAppContainer>
       <SearchList>
-          <p>Search Coin</p>
+          <p>CoinList</p>
+          <p>Search A Coin</p>
       </SearchList>
       <Card>
         <Search
