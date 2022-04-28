@@ -2,6 +2,11 @@
 
 This app lists coins and their rates, a product of payourse [Payourse](https://www.payourse.com/).
 
+## How to setup app
+
+Create a .env file
+Add REACT_APP_BASE_URL=https://staging-biz.coinprofile.co/v3/currency/rate to the file.
+
 ## How to run app
 
 In the project directory, you can run:
