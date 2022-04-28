@@ -1,6 +1,6 @@
 # CoinList
 
-This app lists coins and their rates, a product of payourse [Payourse](https://www.payourse.com/).
+This app lists coins and their rates, a product of [Payourse](https://www.payourse.com/).
 
 ## How to setup app
 
