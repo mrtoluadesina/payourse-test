@@ -1,10 +1,10 @@
 import { ISearch } from "../../typings";
 import { SearchWrapper } from "./style";
 
-const Search = ({ onChange }: ISearch) => {
+const Search = ({ onChange, placeholder }: ISearch) => {
   return (
     <SearchWrapper>
-      <input onChange={onChange} />
+      <input placeholder={placeholder} onChange={onChange} />
     </SearchWrapper>
   );
 };
