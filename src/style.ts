@@ -16,6 +16,11 @@ export const AppContainer = styled.div`
 
         .content {
             display: none;
+            flex-direction: column;
+
+            p {
+                margin-top: 1rem;
+            }
         }
     }
     
