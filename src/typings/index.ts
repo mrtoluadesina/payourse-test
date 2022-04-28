@@ -21,3 +21,8 @@ export interface ISearch {
   onChange: React.InputHTMLAttributes<HTMLInputElement>["onChange"];
   placeholder: string;
 }
+
+export interface ICoin {
+  cryptoCoin: string;
+  rate: number;
+}

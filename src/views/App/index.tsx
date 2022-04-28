@@ -38,15 +38,14 @@ const ListApp = () => {
       </SearchList>
       <Card>
         <Search
-          placeholder={"search for a coin"}
+          placeholder={"enter coin to search"}
           onChange={({ target }) => setSearchValue(target.value)}
         />
         <ListContent>
-          <Coin />
-          {loading && <Skeleton width={100} count={5} />}
+          {loading && <Skeleton height={50} count={8} />}
           {!loading && error ? <p>{error.message}</p> : null}
           {!loading && !error
-            ? coins.map(([key, value]) => <p key={value.key}>{key}</p>)
+            ? coins.map(([key, value]) => <Coin key={value.key} cryptoCoin={key} rate={value.rate} />)
             : null}
         </ListContent>
       </Card>
