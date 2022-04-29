@@ -1,17 +1,19 @@
-import './App.css';
-import { AppContainer } from './style';
-import Heading from './typography/Headings';
-import ListApp from './views/App';
+import "./App.css";
+import { AppContainer } from "./style";
+import CoinList from "./views/CoinList";
 
 function App() {
   return (
     <AppContainer>
       <div className="container">
         <div className="content">
-          <Heading text='CoinList' />
-          <p>CoinList is a simple application that helps people search for their favorite coins and get their up to date price rate</p>
+          <h1>CoinList</h1>
+          <p>
+            CoinList is a simple application that helps people search for their
+            favorite coins and get their up to date price rate
+          </p>
         </div>
-        <ListApp />
+        <CoinList />
       </div>
     </AppContainer>
   );
