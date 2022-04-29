@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Colors } from "../../constants";
+import styled from 'styled-components';
+import { Colors } from '../../constants';
 
 export const CardDiv = styled.div`
   background: ${Colors.white};
@@ -11,7 +11,6 @@ export const CardDiv = styled.div`
   padding: 27px 25px;
   display: flex;
   flex-direction: column;
-  -webkit-box-align: center;
   align-items: center;
   margin: auto;
 
