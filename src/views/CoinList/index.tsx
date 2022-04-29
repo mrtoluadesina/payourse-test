@@ -1,19 +1,23 @@
-import { useEffect, useState } from "react";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
-import { Card, Coin, Search } from "../../components";
-import Button from "../../components/Button";
-import { IRateList, ISearch } from "../../typings";
-import { ListAppContainer, ListContent, SearchList } from "./style";
+import { useEffect, useMemo, useState } from 'react';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+import { Card, Coin, Search } from '../../components';
+import Button from '../../components/Button';
+import { IRateList, ISearch } from '../../typings';
+import { ListAppContainer, ListContent, SearchList } from './style';
 
-const ListApp = () => {
+const CoinList = () => {
   const [loading, setLoading] = useState(false);
   const [list, setList] = useState<IRateList>({} as IRateList);
   const [error, setError] = useState<Error | null>(null);
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState('');
 
-  const coins = Object.entries(list).filter(([key]) =>
-    key.toLowerCase().includes(searchValue.toLocaleLowerCase())
+  const coins = useMemo(
+    () =>
+      Object.entries(list).filter(([key]) =>
+        key.toLowerCase().includes(searchValue.toLocaleLowerCase())
+      ),
+    [list, searchValue]
   );
 
   const fetchList = async () => {
@@ -33,7 +37,7 @@ const ListApp = () => {
     fetchList();
   }, []);
 
-  const handleChange: ISearch["onChange"] = ({ target }) =>
+  const handleChange: ISearch['onChange'] = ({ target }) =>
     setSearchValue(target.value);
 
   return (
@@ -43,7 +47,7 @@ const ListApp = () => {
         <p>Search A Coin</p>
       </SearchList>
       <Card>
-        <Search placeholder={"enter coin to search"} onChange={handleChange} />
+        <Search placeholder={'enter coin to search'} onChange={handleChange} />
         <ListContent>
           {loading && <Skeleton height={50} count={8} />}
           {!loading && error ? (
@@ -63,4 +67,4 @@ const ListApp = () => {
   );
 };
 
-export default ListApp;
+export default CoinList;
