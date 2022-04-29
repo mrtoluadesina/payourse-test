@@ -1,20 +1,16 @@
 import React from "react";
 
-export interface ITypography {
-  text: string;
-}
-
 export interface ICard {
   children: React.ReactNode;
 }
 
-export type rateObj = {
+export type IRate = {
   rate: string;
   key: string;
 };
 
-export interface IList {
-  rates: { string: rateObj };
+export interface IRateList {
+  rates: { string: IRate };
 }
 
 export interface ISearch {
@@ -25,4 +21,9 @@ export interface ISearch {
 export interface ICoin {
   cryptoCoin: string;
   rate: number;
+}
+
+export interface IButton {
+  children: React.ReactNode;
+  onClick: () => void;
 }
