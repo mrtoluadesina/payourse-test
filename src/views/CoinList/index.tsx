@@ -21,8 +21,8 @@ const CoinList = () => {
   );
 
   const fetchList = async () => {
-    setLoading(true);
     try {
+      setLoading(true);
       const response = await fetch(String(process.env.REACT_APP_BASE_URL));
       const { data } = await response.json();
       setList(data.rates);
